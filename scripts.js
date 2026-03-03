@@ -1,4 +1,4 @@
-let KEY_API = "";
+let KEY_API = "sua-chave-aqui"; // Substitua pela sua chave de API real
 let botao = document.querySelector(".botao-gerar");
 let endereco = "https://api.groq.com/openai/v1/chat/completions";
 
