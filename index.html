@@ -1,45 +1,79 @@
-<!DOCTYPE html> 
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>CSS - Gerador de IA</title>
-</head>
+  </head>
 
-<body>
-    <h1>
-        CSS Gerador <span>com IA</span>⚡️
-    </h1>
+  <body>
+    <h1>CSS Gerador <span>com IA</span>⚡️</h1>
 
-    <p>
-        Descreva o que você imagina e veja a mágica acontecer
-    </p>
+    <p>Descreva o que você imagina e veja a mágica acontecer</p>
 
-    <textarea rows="3" class="caixa-texto" placeholder="Ex: Bola azul pingando"></textarea>
+    <textarea
+      rows="3"
+      class="caixa-texto"
+      placeholder="Ex: Bola azul pingando"
+    ></textarea>
 
     <button class="botao-gerar">Gerar Código ⚡️</button>
 
-    <h2>Código</h2>
-    <p class="bloco-codigo"></p>
+    <div class="container-resultado">
+      <div class="coluna">
+        <h2>Código</h2>
+        <pre class="bloco-codigo"></pre>
+      </div>
+      <div class="coluna">
+        <h2>Preview</h2>
+        <iframe
+          class="resultado-codigo"
+          title="Preview do código CSS gerado"
+        ></iframe>
+      </div>
+    </div>
+     <footer>
+        <div class="rodape">
+          <a
+            aria-label="instagram"
+            href="https://instagram.com/nadson_ct"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            aria-label="linkedin"
+            href="https://www.linkedin.com/in/nadson-cutrim/"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            aria-label="github"
+            href="https://github.com/nadson-cutrim"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <p class="dev">Desenvolvido por Nadson Cutrim🎈</p>
+        </div>
+      </footer>
+  </body>
 
-    <h2>Preview</h2>
-    <iframe class="resultado-codigo" title="Preview do código CSS gerado"></iframe>
-
-  
-
-</body>
-
-<script src="scripts.js">
-
-</script>
-
-
+  <script src="scripts.js"></script>
 </html>
