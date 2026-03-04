@@ -1,4 +1,4 @@
-let KEY_API = "sua-chave-aqui"; // Substitua pela sua chave de API real
+let KEY_API = "";
 let botao = document.querySelector(".botao-gerar");
 let endereco = "https://api.groq.com/openai/v1/chat/completions";
 
@@ -37,3 +37,22 @@ async function gerarCodigo() {
 }
 
 botao.addEventListener("click", gerarCodigo);
+
+window.addEventListener("load", () =>{
+  const video = document.createElement("video")
+  const midiaBackground = document.querySelector(".media-background")
+
+  video.src = "./assets/background/bg-hero.mp4";
+  video.autoplay = true;
+  video.muted = true;
+  video.playsInline = true;
+  video.loop = true;
+  video.transition= "0.1s infinite ease-in-out";
+  video.style.opacity = 0;
+
+  video.addEventListener("canplaythrough", () =>{
+    video.style.opacity = 1;
+  })
+  midiaBackground.appendChild(video);
+})
+
