@@ -1,18 +1,9 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const fetch = require("node-fetch");
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Método não permitido" });
+  }
 
-dotenv.config();
-
-const app = express();
-app.use(express.json());
-app.use(express.static("public"));
-app.use(express.static("assets"));
-
-app.post("/gerar", async (req, res) => {
   try {
-    console.log("Prompt recebido:", req.body.prompt);
-
     const resposta = await fetch(
       "https://api.groq.com/openai/v1/chat/completions",
       {
@@ -35,19 +26,14 @@ app.post("/gerar", async (req, res) => {
             },
           ],
         }),
-      },
+      }
     );
 
     const dados = await resposta.json();
-    console.log("Resposta da API:", dados); 
+    return res.status(200).json(dados);
 
-    res.json(dados);
-  } catch (erro) {
-    console.error("🚨 ERRO REAL:", erro);
-    res.status(500).json({ erro: erro.message });
+  } catch (error) {
+    console.error("🚩Erro:", error);
+    return res.status(500).json({ error: "Erro interno" });
   }
-});
-const port = 3030;
-app.listen(port, () => {
-  console.log(`🚀🔥Server rodando na porta http://localhost:${port} !`);
-});
+}
