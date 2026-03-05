@@ -43,7 +43,7 @@ app.post("/gerar", async (req, res) => {
 
     res.json(dados);
   } catch (erro) {
-    console.error("🔥 ERRO REAL:", erro);
+    console.error("🚨 ERRO REAL:", erro);
     res.status(500).json({ erro: erro.message });
   }
 });
